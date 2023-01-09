@@ -26,7 +26,7 @@
  */
 
 // If this file is called directly, abort.
-if ( ! defined( 'WPINC' ) ) {
+if (!defined('WPINC')) {
 	die;
 }
 
@@ -35,14 +35,15 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'WC_ORDER_DETAILS_ENHANCEMENTS_VERSION', '1.0.0' );
+define('WC_ORDER_DETAILS_ENHANCEMENTS_VERSION', '1.0.2');
 
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-wc-order-details-enhancements-activator.php
  */
-function activate_wc_order_details_enhancements() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-wc-order-details-enhancements-activator.php';
+function activate_wc_order_details_enhancements()
+{
+	require_once plugin_dir_path(__FILE__) . 'includes/class-wc-order-details-enhancements-activator.php';
 	Wc_Order_Details_Enhancements_Activator::activate();
 }
 
@@ -50,19 +51,20 @@ function activate_wc_order_details_enhancements() {
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-wc-order-details-enhancements-deactivator.php
  */
-function deactivate_wc_order_details_enhancements() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-wc-order-details-enhancements-deactivator.php';
+function deactivate_wc_order_details_enhancements()
+{
+	require_once plugin_dir_path(__FILE__) . 'includes/class-wc-order-details-enhancements-deactivator.php';
 	Wc_Order_Details_Enhancements_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_wc_order_details_enhancements' );
-register_deactivation_hook( __FILE__, 'deactivate_wc_order_details_enhancements' );
+register_activation_hook(__FILE__, 'activate_wc_order_details_enhancements');
+register_deactivation_hook(__FILE__, 'deactivate_wc_order_details_enhancements');
 
 /**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-require plugin_dir_path( __FILE__ ) . 'includes/class-wc-order-details-enhancements.php';
+require plugin_dir_path(__FILE__) . 'includes/class-wc-order-details-enhancements.php';
 
 /**
  * Begins execution of the plugin.
@@ -73,10 +75,10 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-wc-order-details-enhanceme
  *
  * @since    1.0.0
  */
-function run_wc_order_details_enhancements() {
+function run_wc_order_details_enhancements()
+{
 
 	$plugin = new Wc_Order_Details_Enhancements();
 	$plugin->run();
-
 }
 run_wc_order_details_enhancements();

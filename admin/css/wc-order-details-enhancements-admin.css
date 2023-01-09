@@ -2,3 +2,52 @@
  * All of the CSS for your admin-specific functionality should be
  * included in this file.
  */
+
+#woocommerce-order-items
+  .woocommerce_order_items_wrapper
+  table.woocommerce_order_items
+  td.item_cost_incl_tax,
+#woocommerce-order-items
+  .woocommerce_order_items_wrapper
+  table.woocommerce_order_items
+  td.line_cost_incl_tax,
+#woocommerce-order-items
+  .woocommerce_order_items_wrapper
+  table.woocommerce_order_items
+  th.item_cost_incl_tax,
+#woocommerce-order-items
+  .woocommerce_order_items_wrapper
+  table.woocommerce_order_items
+  th.line_cost_incl_tax {
+  text-align: right;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+#woocommerce-order-items
+  .woocommerce_order_items_wrapper
+  table.woocommerce_order_items
+  td.item_cost_incl_tax
+  .item_format,
+#woocommerce-order-items
+  .woocommerce_order_items_wrapper
+  table.woocommerce_order_items
+  td.line_cost_incl_tax
+  .item_format {
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+#woocommerce-order-items
+  .woocommerce_order_items_wrapper
+  table.woocommerce_order_items
+  td.item_cost_incl_tax.fill {
+  background-color: #f9f9ff;
+}
+
+#woocommerce-order-items
+  .woocommerce_order_items_wrapper
+  table.woocommerce_order_items
+  td.line_cost_incl_tax.fill {
+  background-color: #eff0fc;
+}
